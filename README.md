@@ -1,32 +1,49 @@
 # SimpDB
+
 SimpDB is a simple key value database that stores JSON data, written in Python.
-## Usage
-#### Import Module
+
+## Getting Started
+
+### Installation
+
+Clone the repository:
+
+```shell
+git clone https://github.com/ElliottStorey/simp-db.git
+cd simp-db
 ```
+
+### Usage
+
+Import the module:
+
+```python
 from simpdb import SimpDB
 ```
-#### Initialize Database
-```
+
+Initialize a database:
+
+```python
 myDatabase = SimpDB("./myDatabase.sdb")
 ```
-#### Set Key Values
-```
-# Create Username and Password
+
+Set key-value pairs:
+
+```python
 myDatabase.set("username", "ElliottStorey")
 myDatabase.set("password", 314159)
+```
 
-# Update Password
-myDatabase.set("password", "Password123!")
-```
-#### Read Key Values
-```
+Read values:
+
+```python
 username = myDatabase.read("username")
-print(username)
+print(username)  # Output: ElliottStorey
+```
 
->> ElliottStorey
-```
-#### Delete Key Values
-```
+Delete keys:
+
+```python
 myDatabase.delete("username")
 myDatabase.delete("password")
 ```
